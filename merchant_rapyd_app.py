@@ -63,7 +63,7 @@ def add_product(merchant_id: str, name: str, price: float):
 
 # Collect payment using Rapyd
 @app.post("/pay/{product_id}")
-def collect_payment(product_id: str):
+def collect_payment(product_id: str, currency: str, payment_method: str):
     if product_id not in products:
         raise HTTPException(status_code=404, detail="Product not found")
     
@@ -73,8 +73,8 @@ def collect_payment(product_id: str):
     
     payment_data = {
         "amount": amount,
-        "currency": "USD",
-        "payment_method": "card",
+        "currency": currency,
+        "payment_method": payment_method,
         "description": f"Payment for {product['name']}"
     }
     
