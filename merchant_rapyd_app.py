@@ -16,8 +16,8 @@ payments = {}
 payouts = {}
 
 # Rapyd API credentials (Replace with actual values)
-RAPYD_ACCESS_KEY = "YOUR_RAPYD_KEY"
-RAPYD_SECRET_KEY = "YOUR_RAPYD_PASSWORD"
+RAPYD_ACCESS_KEY = "YOUR_ACCESS_KEY"
+RAPYD_SECRET_KEY = "YOUR_SECRET_KEY"
 RAPYD_BASE_URL = "https://sandboxapi.rapyd.net"
 
 # Utility function to generate Rapyd headers
